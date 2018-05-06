@@ -32,7 +32,7 @@ import {ResetPasswordRequestFormComponent} from './reset-password-page/reset-pas
 import {ResetPasswordFormComponent} from './reset-password-page/reset-password-form.component';
 import {FormOptionalComponent} from './form-components/form-optional-component';
 import {ContractPageComponent} from './contract-page.component.ts/contract-page.component';
-import {ModalModule} from 'ngx-bootstrap';
+import {ModalModule, PaginationModule} from 'ngx-bootstrap';
 import {ErrorModalComponent} from './app-components/error-modal.component';
 import {ErrorModalService} from './app-components/error-modal-service.compoennt';
 import { MarkdownModule } from 'ngx-markdown';
@@ -77,6 +77,7 @@ import {ServicePercentFeesBoxComponent} from './app-components/service-percent-f
     ClipboardModule,
     MarkdownModule.forRoot(),
     ModalModule.forRoot(),
+    PaginationModule.forRoot(),
     RecaptchaModule.forRoot(),
     BrowserModule,
     AppRoutingModule,

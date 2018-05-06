@@ -5,13 +5,22 @@
         <div class="pull-left">
           <h1 class="title">Services</h1>
         </div>
+        <div class="pull-right">
+          <nav aria-label="Services pages">
+              <pagination
+                [(ngModel)]="currentPage"
+                [itemsPerPage]="servicesPerPage"
+                [totalItems]="services.length"
+                (ngModelChange)="setVisibleServices()"
+              >
+              </pagination>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
 
-
-
-<div class="container-fluid panel service-listing" *ngFor="let service of services">
+<div class="container-fluid panel service-listing" *ngFor="let service of visibleServices">
   <a [routerLink]="['/services', service.id]">
   <div class="row">
       <div class="col-md-6">
